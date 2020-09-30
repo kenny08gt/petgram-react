@@ -4,7 +4,7 @@ import styled from 'styled-components'
 
 const SvgWrapper = styled.div`
   margin-left: 0px;
-  margin-bottom: -1px;
+  margin-bottom: -2px;
 `
 
 const MyLoader = (props) => (
