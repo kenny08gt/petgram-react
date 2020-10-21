@@ -7,7 +7,7 @@ const SvgWrapper = styled.div`
   margin-bottom: -2px;
 `
 
-const MyLoader = (props) => (
+const HistoriesLoader = (props) => (
   <SvgWrapper>
     <ContentLoader
       speed={2}
@@ -34,4 +34,11 @@ const MyLoader = (props) => (
   </SvgWrapper>
 )
 
-export default MyLoader
+HistoriesLoader.metadata = {
+  name: 'Alan Hurtarte', // My name
+  github: 'kenny08gt', // Github username
+  description: 'Loader for instagram histories. Picture + username', // Little tagline
+  filename: 'HistoriesLoader.js' // filename of your loader
+}
+
+export default HistoriesLoader

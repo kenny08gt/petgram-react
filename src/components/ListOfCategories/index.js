@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import MyLoader from './loader'
+import HistoriesLoader from './HistoriesLoader'
 
 import { Category } from '../Category'
 import { List, Item } from './styles'
@@ -11,7 +11,7 @@ function useCategoreisData () {
 
   useEffect(function () {
     setLoading(true)
-    window.fetch('http://petgram-server-alan.alan-hurtarte.vercel.app/categories')
+    window.fetch('https://petgram-server-alan.alan-hurtarte.vercel.app/categories')
       .then(res => res.json())
       .then(response => {
         setLoading(false)
@@ -40,7 +40,7 @@ export const ListOfCategories = () => {
   const renderList = (fixed) => (
     <List fixed={fixed}>
       {
-        loading ? <MyLoader />
+        loading ? <HistoriesLoader />
           : categories.map(category => <Item key={category.id}><Category {...category} /></Item>)
       }
     </List>
